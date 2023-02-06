@@ -1,6 +1,5 @@
-import 'dart:ffi';
-
 import 'package:bookstore/model/topicmodel.dart';
+import 'package:bookstore/screen/maindashboard/maindashscreen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -88,7 +87,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   List<bool> isSelected = [];
   List ss = [];
   _selected(int i) {
-    print(i);
     setState(() {
       if (ss.contains(i)) {
         ss.remove(i);
@@ -164,7 +162,52 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                     );
                   }),
-            )
+            ),
+            Center(
+              child: Column(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "More topics",
+                      style: TextStyle(
+                        color: Color(0xFFFF6EA1),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const MainDashScreen(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFFF6EA1),
+                      textStyle: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      padding: EdgeInsets.only(
+                        top: 16.0,
+                        bottom: 16.0,
+                        right: MediaQuery.of(context).size.width * 0.35,
+                        left: MediaQuery.of(context).size.width * 0.35,
+                      ),
+                    ),
+                    child: const Text("Apply"),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

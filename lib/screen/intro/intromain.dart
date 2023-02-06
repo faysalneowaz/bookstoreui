@@ -53,7 +53,7 @@ class _IntroMainState extends State<IntroMain> {
                 ),
               ],
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.5,
               child: PageView.builder(
                 controller: _pageController,
@@ -126,7 +126,7 @@ class _IntroMainState extends State<IntroMain> {
                     fontWeight: FontWeight.w400,
                   ),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(35.0),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                   padding: const EdgeInsets.only(
                     top: 16.0,
