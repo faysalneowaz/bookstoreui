@@ -11,13 +11,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFBFBFB),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 28.0,
           left: 8.0,
           right: 8.0,
         ),
-        child: Column(
+        child: ListView(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,6 +26,92 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 profileName(),
                 imageAndButton(),
               ],
+            ),
+
+            //Account
+            const Text(
+              "Account",
+              style: TextStyle(color: Colors.black38, fontSize: 20),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.shopping_cart,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "My Cart",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+
+            const ListTile(
+              leading: Icon(
+                Icons.credit_card,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Purchases",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+
+            const ListTile(
+              leading: Icon(
+                Icons.person,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Account",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+
+            //settings
+            const Text(
+              "Settings",
+              style: TextStyle(color: Colors.black38, fontSize: 20),
+            ),
+
+            const ListTile(
+              leading: Icon(
+                Icons.notifications,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Notification",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+
+            const ListTile(
+              leading: Icon(
+                Icons.circle,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Language",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.help_sharp,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Help",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(
+                Icons.logout,
+                color: Color(0xFFFF6EA1),
+              ),
+              title: Text(
+                "Sign Out",
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
             ),
           ],
         ),
